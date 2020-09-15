@@ -20,8 +20,8 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     # telling django to use portal.urls to serve webpage
-    path('home/', include('portal.urls')),
-    # url pattern for about me page exists in portal/urls.py
-    path('aboutme/', include('portal.urls')),
-    path('githubprojects/', include('portal.urls'))  # ""
+    # This acts as the beginning portion of the url. We specify the differnt subpages in the portal/urls.py
+    # By using empty string as our url-prefixer, we can simply go to urls such as localhost:8000/aboutme, /githubprojects
+    path("", include('portal.urls'))
+
 ]
