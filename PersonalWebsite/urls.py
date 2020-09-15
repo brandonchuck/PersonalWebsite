@@ -14,8 +14,14 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
+# These urlpatterns are communicating with the urlpatterns in portal/urls.py
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # telling django to use portal.urls to serve webpage
+    path('home/', include('portal.urls')),
+    # url pattern for about me page exists in portal/urls.py
+    path('aboutme/', include('portal.urls')),
+    path('githubprojects/', include('portal.urls'))  # ""
 ]
