@@ -1,0 +1,9 @@
+<!--Template Inheritance!-->
+<!--extending the base.html template with code that is unique to the about page!-->
+{% extends "portal/base.html" %}
+
+<!-- specify which block you want to overwrite in base.html-->
+{% block content %}
+<!-- place python/html code here to overwrite the tags inside of base.html -->
+<h1>About Me Page!</h1>
+{% endblock content %}

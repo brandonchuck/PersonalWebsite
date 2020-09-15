@@ -29,8 +29,12 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+# Add apps here everytime you create a new one
+# This is where django looks for our mnodels when dealing with databases...
 
 INSTALLED_APPS = [
+    # adding "portal app" by specifying the class found portal/apps.py
+    'portal.apps.PortalConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

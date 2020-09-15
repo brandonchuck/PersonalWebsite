@@ -5,11 +5,13 @@ from django.http import HttpRequest, HttpResponse, HttpResponseRedirect
 
 
 def home(request):
-    return HttpResponse('<h1> This is the Home page </h1>')
+    # render takes "request", and html template found in app subdir of templates folder
+    # render can also take a dictionary as its last arg
+    return render(request, 'portal/home.html')
 
 
 def about(request):
-    return HttpResponse('<h1> This is the About me page </h1>')
+    return render(request, 'portal/aboutme.html')
 
 
 def github(request):
